@@ -17,7 +17,9 @@ public class AccesoDatos {
 		BufferedReader lector = new BufferedReader(new FileReader(file));
 		String lineas;
 		while((lineas = lector.readLine()) != null) {
-			return anadePersona(lineas);
+			if(lineas.contains(nombre)) {
+				return anadePersona(lineas);
+			}
 		}
 		lector.close();
 		return null;
