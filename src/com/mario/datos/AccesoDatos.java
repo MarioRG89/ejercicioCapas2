@@ -17,7 +17,7 @@ public class AccesoDatos {
 		BufferedReader lector = new BufferedReader(new FileReader(file));
 		String lineas;
 		while((lineas = lector.readLine()) != null) {
-			return extracted(lineas);
+			return anadePersona(lineas);
 		}
 		lector.close();
 		return null;
@@ -29,7 +29,7 @@ public class AccesoDatos {
 	 * @param lineas
 	 * @return
 	 */
-	private Persona extracted(String lineas) {
+	private Persona anadePersona(String lineas) {
 		String []arrayPersona= lineas.split("-");
 		Persona p = new Persona(arrayPersona[0], Integer.parseInt(arrayPersona[1]), Integer.parseInt(arrayPersona[2]));
 		return p;
