@@ -10,7 +10,7 @@ public class LogicaNegocio {
 		AccesoDatos acc = new AccesoDatos();
 		double peso=(acc.consultaPersona(nombre).getPeso());
 		double altura=(acc.consultaPersona(nombre).getAltura());
-		imc=peso/altura;
+		imc=(peso/altura)*100;
 		return imc;
 		
 	}
